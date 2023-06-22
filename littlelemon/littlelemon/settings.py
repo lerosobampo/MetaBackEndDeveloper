@@ -38,7 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'restaurant',                                                       #APP restaurant added to project
+    'rest_framework',
 ]
+
+# DD MM YYYY
+
+DATE_INPUT_FORMATS = ['%d.%m.%Y']
+
+USE_L10N = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
