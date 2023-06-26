@@ -39,7 +39,27 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'restaurant',                                                       #APP restaurant added to project
     'rest_framework',
+    'djoser',
+    'rest_framework.authtoken',
 ]
+
+#REST FRAMEWORK
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+}
+
+#DJOSER
+
+DJOSER={"USER_ID_FIELD":"username"}
 
 # DD MM YYYY
 
